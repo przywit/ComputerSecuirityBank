@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Security-Policy">
     <title>ComputerSecurityBank</title>
-    <link th:rel="stylesheet" th:href="@{webjars/bootstrap/5.1.1/css/bootstrap.min.css} "/>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.1/css/bootstrap.min.css} "/>
 </head>
 <body>
 <div class="container text-center">
@@ -18,7 +18,7 @@
                 <label class="col-4 col-form-label">Receiver: </label>
                 <div class="col-8">
                     <label>
-                        <input type="text" th:field="*{receiver}" class="form-control" required />
+                        <input id="receiver" type="text" th:field="*{receiver}" class="form-control" required />
                     </label>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                 <label class="col-4 col-form-label">Amount: </label>
                 <div class="col-8">
                     <label>
-                        <input type="number" th:field="*{amount}" class="form-control" required />
+                        <input id="amount" type="number" th:field="*{amount}" class="form-control" required />
                     </label>
                 </div>
             </div>
