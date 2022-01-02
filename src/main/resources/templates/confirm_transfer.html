@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy">
+    <title>ComputerSecurityBank</title>
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap/5.1.1/css/bootstrap.min.css} "/>
+</head>
+<body>
+<div class="container text-center">
+    <h1>Confirm your transfer in ComputerSecurityBank</h1>
+</div>
+
+<div class="container text-center">
+    <div>
+        <h1>Transfer Details</h1>
+    </div>
+
+    <div>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th>Receiver</th>
+                <th>Amount</th>
+            </tr>
+            </thead>
+            <tbody>
+                <td th:text="${transfer.receiver}">Receiver</td>
+                <td th:text="${transfer.amount}">Amount</td>
+            </tbody>
+        </table>
+    </div>
+    <form th:action="@{/bank/process_confrim_transfer}" th:object="${transfer}"
+          method="post" style="max-width: 600px; margin: 0 auto;">
+        <label>
+            <input type="hidden" th:field="*{amount}" th:value="${transfer.amount}"/>
+        </label>
+        <label>
+            <input type="hidden" th:field="*{receiver}" th:value="${transfer.receiver}"/>
+        </label>
+        <div>
+            <button type="submit" class="btn btn-primary">Confirm</button>
+        </div>
+    </form>
+</div>
+
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy">
+    <title>ComputerSecurityBank Home</title>
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap/5.1.1/css/bootstrap.min.css} "/>
+</head>
+<body>
+<div class="container text-center">
+    <h1>Welcome to ComputerSecurityBank HomePage </h1>
+      <h3><a th:href="@{/register}">Register</a></h3>
+      <h3><a th:href="@{/login}">Login</a></h3>
+      <h3><a th:href="@{/reset_password}">Forgot Password</a></h3>
+</div>
+
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+
+</body>
+</html>
